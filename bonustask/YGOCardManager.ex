@@ -1,7 +1,4 @@
-
-
 defmodule YugiohCLI do
-
   defmodule Card do
     defstruct [id, name, type, attribute, level, attack, defense]
   end
@@ -71,7 +68,7 @@ defmodule YugiohCLI do
   end
 
   defp prompt_card do
-    id      = prompt_integer(Въведете ID (integer) )
+    id      = prompt_integer(Въведете ID)
     name    = prompt(Въведете име на картата )
     type    = prompt_atom(Въведете тип (monster, spell, trap) , [monster, spell, trap])
     attr    = prompt_atom(Въведете атрибут (EARTH, WATER, FIRE, WIND, LIGHT, DARK) ,
@@ -133,7 +130,7 @@ defmodule YugiohCLI do
         loop(card_list)
 
       0 -
-        IO.puts(Край. Довиждане!)
+        IO.puts(Край!)
 
       _ -
         IO.puts(Невалиден избор, опитайте пак.)
