@@ -1,7 +1,4 @@
-
-
 defmodule YugiohCLI do
-
   defmodule Card do
     defstruct [:id, :name, :type, :attribute, :level, :attack, :defense]
   end
